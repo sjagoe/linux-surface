@@ -1,8 +1,8 @@
-From 0a7aed31749d66652fd63b5843fa6b97febdb2d1 Mon Sep 17 00:00:00 2001
+From 6553bd13ba8e086fdf0071f25bf0aaf9a580ab23 Mon Sep 17 00:00:00 2001
 From: Tsuchiya Yuto <kitakar@gmail.com>
 Date: Sun, 18 Oct 2020 16:42:44 +0900
-Subject: [PATCH] (surface3-oemb) add DMI matches for Surface 3 with broken DMI
- table
+Subject: [PATCH 1/2] (surface3-oemb) add DMI matches for Surface 3 with broken
+ DMI table
 
 On some Surface 3, the DMI table gets corrupted for unknown reasons
 and breaks existing DMI matching used for device-specific quirks.
@@ -97,13 +97,13 @@ index e4c3492a0..0b930c91b 100644
  };
  
 -- 
-2.53.0
+2.54.0
 
-From 4dcd8430344c4c7d852ffc32e3ad29ee7313e371 Mon Sep 17 00:00:00 2001
+From e4ad670c96630043da5d302059a692f7afaf0e2c Mon Sep 17 00:00:00 2001
 From: kitakar5525 <34676735+kitakar5525@users.noreply.github.com>
 Date: Fri, 6 Dec 2019 23:10:30 +0900
-Subject: [PATCH] surface3-spi: workaround: disable DMA mode to avoid crash by
- default
+Subject: [PATCH 2/2] surface3-spi: workaround: disable DMA mode to avoid crash
+ by default
 
 On Arch Linux kernel at least after 4.19, touch input is broken after suspend
 (s2idle).
@@ -230,5 +230,5 @@ index 6074b7730..6aa3e1d6f 100644
  }
  
 -- 
-2.53.0
+2.54.0
 
