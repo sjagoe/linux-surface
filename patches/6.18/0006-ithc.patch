@@ -1,4 +1,4 @@
-From 0bd12b6a2b4dc41479a1fd6c8e18e408744c43f1 Mon Sep 17 00:00:00 2001
+From 0464341debac381d9357790cd069e28b66ac26b3 Mon Sep 17 00:00:00 2001
 From: Dorian Stoll <dorian.stoll@tmsp.io>
 Date: Sun, 11 Dec 2022 12:03:38 +0100
 Subject: [PATCH 1/2] iommu: intel: Disable source id verification for ITHC
@@ -39,7 +39,7 @@ index 8bcbfe3d9..c78806d35 100644
 -- 
 2.54.0
 
-From d8ad80e966792739c700b5161cdf92b726522e76 Mon Sep 17 00:00:00 2001
+From 138c19e25f02a789f4fa6eee0434fca6c85c5f4d Mon Sep 17 00:00:00 2001
 From: quo <tuple@list.ru>
 Date: Sun, 11 Dec 2022 12:10:54 +0100
 Subject: [PATCH 2/2] hid: Add support for Intel Touch Host Controller

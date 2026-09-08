@@ -1,4 +1,4 @@
-From 9a8dd48f8a0093029d489b9554e2e831905c2600 Mon Sep 17 00:00:00 2001
+From 57512bd2ae42f2d545662ee25574564d32a96d63 Mon Sep 17 00:00:00 2001
 From: "Bart Groeneveld | GPX Solutions B.V" <bart@gpxbv.nl>
 Date: Mon, 5 Dec 2022 16:08:46 +0100
 Subject: [PATCH] acpi: allow usage of acpi_tad on HW-reduced platforms
@@ -21,7 +21,7 @@ Patchset: rtc
  1 file changed, 24 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/acpi/acpi_tad.c b/drivers/acpi/acpi_tad.c
-index 33418dd67..f94bbdc1d 100644
+index fcebfa7d5..107127792 100644
 --- a/drivers/acpi/acpi_tad.c
 +++ b/drivers/acpi/acpi_tad.c
 @@ -433,6 +433,14 @@ static ssize_t caps_show(struct device *dev, struct device_attribute *attr,
@@ -79,7 +79,7 @@ index 33418dd67..f94bbdc1d 100644
  	if (dd->capabilities & ACPI_TAD_DC_WAKE) {
  		acpi_tad_disable_timer(dev, ACPI_TAD_DC_TIMER);
  		acpi_tad_clear_status(dev, ACPI_TAD_DC_TIMER);
-@@ -616,12 +628,6 @@ static int acpi_tad_probe(struct platform_device *pdev)
+@@ -620,12 +632,6 @@ static int acpi_tad_probe(struct platform_device *pdev)
  		goto remove_handler;
  	}
  
@@ -92,7 +92,7 @@ index 33418dd67..f94bbdc1d 100644
  	dd = devm_kzalloc(dev, sizeof(*dd), GFP_KERNEL);
  	if (!dd) {
  		ret = -ENOMEM;
-@@ -652,6 +658,12 @@ static int acpi_tad_probe(struct platform_device *pdev)
+@@ -656,6 +662,12 @@ static int acpi_tad_probe(struct platform_device *pdev)
  	if (ret)
  		goto fail;
  
