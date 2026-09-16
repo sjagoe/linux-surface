@@ -1,4 +1,4 @@
-From d999a58b5c13807c7a3861195bc06d75ed6a18a6 Mon Sep 17 00:00:00 2001
+From 3702a29ea3871dd8c15c410d51a07b7df8452f59 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sun, 19 Feb 2023 22:12:24 +0100
 Subject: [PATCH 1/2] PCI: Add quirk to prevent calling shutdown method
@@ -81,10 +81,10 @@ index af5805766..ee149ef1f 100644
 +DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_INTEL, 0x466d, quirk_no_shutdown);  // Thunderbolt 4 NHI
 +DECLARE_PCI_FIXUP_FINAL(PCI_VENDOR_ID_INTEL, 0x46a8, quirk_no_shutdown);  // GPU
 diff --git a/include/linux/pci.h b/include/linux/pci.h
-index 505bf6e00..14865424a 100644
+index 148b71af8..369778117 100644
 --- a/include/linux/pci.h
 +++ b/include/linux/pci.h
-@@ -488,6 +488,7 @@ struct pci_dev {
+@@ -500,6 +500,7 @@ struct pci_dev {
  	unsigned int	rom_bar_overlap:1;	/* ROM BAR disable broken */
  	unsigned int	rom_attr_enabled:1;	/* Display of ROM attribute enabled? */
  	unsigned int	non_mappable_bars:1;	/* BARs can't be mapped to user-space  */
@@ -95,7 +95,7 @@ index 505bf6e00..14865424a 100644
 -- 
 2.54.0
 
-From 4265839b97fab774293f865b37b344f2554dbc7c Mon Sep 17 00:00:00 2001
+From 57b6570e1a7f3048e231cfded2d164615286df73 Mon Sep 17 00:00:00 2001
 From: LegendaryFire <tristan.balon@outlook.com>
 Date: Wed, 7 Jan 2026 01:06:25 +0100
 Subject: [PATCH 2/2] PCI: Add Surface Laptop Studio 2 devices to shutdown ops

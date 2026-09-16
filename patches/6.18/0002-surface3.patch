@@ -1,4 +1,4 @@
-From 5a38a00236c24764790e6d130b5a66fbf99d5d43 Mon Sep 17 00:00:00 2001
+From 269a57cd2866fad606cda788bd12338c5e280ac5 Mon Sep 17 00:00:00 2001
 From: Tsuchiya Yuto <kitakar@gmail.com>
 Date: Sun, 18 Oct 2020 16:42:44 +0900
 Subject: [PATCH 1/2] (surface3-oemb) add DMI matches for Surface 3 with broken
@@ -99,7 +99,7 @@ index e4c3492a0..0b930c91b 100644
 -- 
 2.54.0
 
-From 60d3cbd61eb7cf2506be14d10c829f156c16228f Mon Sep 17 00:00:00 2001
+From 5394d1089cf096ea2f2b0058f22269d2f573e59e Mon Sep 17 00:00:00 2001
 From: kitakar5525 <34676735+kitakar5525@users.noreply.github.com>
 Date: Fri, 6 Dec 2019 23:10:30 +0900
 Subject: [PATCH 2/2] surface3-spi: workaround: disable DMA mode to avoid crash
