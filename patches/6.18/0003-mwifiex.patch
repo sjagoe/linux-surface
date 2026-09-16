@@ -363,7 +363,7 @@ index 68054ae28..d6967e6dd 100644
  #define BTUSB_ACTIONS_SEMI		BIT(27)
  #define BTUSB_BARROT			BIT(28)
  #define BTUSB_BROKEN_EXT_SCAN		BIT(29)
-+#define BTUSB_LOWER_LESCAN_INTERVAL    BIT(30)
++#define BTUSB_LOWER_LESCAN_INTERVAL	BIT(30)
  
  static const struct usb_device_id btusb_table[] = {
  	/* Generic Bluetooth USB device */
